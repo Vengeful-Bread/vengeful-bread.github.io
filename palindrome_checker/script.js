@@ -1,6 +1,7 @@
 const button = document.getElementById("btn");
 const textField = document.getElementById("text-input");
 const output = document.getElementById("result");
+const equivalency = document.getElementById("equivalency")
 
 const checkUserInput = () => {
     const input = textField.value.trim(); // Trim to remove leading/trailing whitespaces
@@ -18,6 +19,13 @@ const checkPalindrome = (input) => {
     input = input.replace(/\s/g, "").toLowerCase(); // Use toLowerCase() instead of toLowercase(), and use regex to replace all whitespaces
     const reversedInput = reverseString(input);
     output.innerText = input === reversedInput ? `${storedInput} is a palindrome` : `${storedInput} is not a palindrome`;
+    if (input === reversedInput) {
+        output.innerText = `${storedInput} is a palindrome`
+        equivalency.innerText = `${input} = ${reversedInput}`
+    } else {
+        output.innerText = `${storedInput} is not a palindrome`
+        equivalency.innerText = `${input} ≠ ${reversedInput}`
+    }
 };
 
 const reverseString = (input) => input.split("").reverse().join("");

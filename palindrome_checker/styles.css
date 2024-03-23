@@ -50,7 +50,7 @@ h1 {
   height: 25px;
 }
 
-#result {
+#result, #equivalency {
   margin: 10px 0;
   min-width: 200px;
   width: fit-content;
