@@ -1,0 +1,24 @@
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --background: #323031;
+  --text-color: #FCF7F8;
+  --highlights: #7F7979;
+}
+
+body {
+    background-color: var(--background);
+    font-family: "Times New Roman", Times, serif;
+    font-size: 18px;
+    color: var(--text-color);
+    padding: 0 15px;
+}
+
+nav {
+    height: fit-content;
+}

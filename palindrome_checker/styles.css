@@ -62,10 +62,7 @@ h1 {
   text-align: center;
 }
 
-nav {
-    margin-left: 75%;
-}
-
+nav {margin-left: 75%;}
 a {color: var(--text-color);}
 a:hover {color: var(--highlights);}
 a, a:hover {text-decoration: none;}
