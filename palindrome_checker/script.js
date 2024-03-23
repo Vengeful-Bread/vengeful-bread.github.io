@@ -14,9 +14,10 @@ const checkUserInput = () => {
 };
 
 const checkPalindrome = (input) => {
-    input = input.replace(" ", "")
-    const reversedInput = reverseString(input).replace(" ", "");
-    output.innerText = input === reversedInput ? "This is a palindrome" : "This is not a palindrome";
+    storedInput = input
+    input = input.replace(" ", "").toLowercase();
+    const reversedInput = reverseString(input).replace(" ", "").toLowercase();
+    output.innerText = input === reversedInput ? `${storedInput} is a palindrome` : `${storedInput} is not a palindrome`;
 };
 
 const reverseString = (input) => input.split("").reverse().join("");
