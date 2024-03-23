@@ -19,6 +19,61 @@ body {
     padding: 0 15px;
 }
 
-nav {
-    height: fit-content;
+.navbar {
+  height: 60px;
+  width: 100%;
+  display: flex; /* flex (or Flexbox) divs automatically inner elements into a row */
+  justify-content: space-around; /* Justify content lets you determine how the inner items behave on an x axis in a Flexbox */
+  align-items: center; /* Align items lets you determine the alignment of inner elements on a Y axis in a flexbox. In this case, you're centering the items in the middle. */
+  background-color: black;
+  color: white;
+  border-bottom: 1px solid grey;
 }
+
+.navbar-logo {
+  font-size: 40px;
+  text-align: left;
+}
+
+.navbar-menu { /* Create a container for the navbar-menu items (excludes things you don't want users to click on_. In this case, this should include your links, divider, and logo */
+  display: flex; 
+  align-items: center;
+}
+
+.navbar-menu ul { /* Align items horizontally again for the link list */
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+.navbar-menu a { /* Basic link styling */
+  display: inline-block;
+  margin: 0 10px;
+  text-decoration: none;
+  color: white;
+  transition: all .2s ease;
+}
+
+/* Line for the divider */
+.navbar-menu-divider {
+  height: 60px;
+  background-color: grey;
+  width: .5px;
+}
+
+.github-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: .2s ease;
+    height: 60px;
+    width: 60px;
+    list-style-type: none;
+}
+
+.project-link, .project-link:visited, .github-link, .github-link:visited {
+    color: var(--highlights);
+}
+
+.project-link:hover, .github-link:hover {color: var(--text-color);}
