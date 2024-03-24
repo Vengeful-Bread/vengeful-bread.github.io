@@ -1,5 +1,5 @@
 const button = document.getElementById("btn");
-const textField = document.getElementById("text-input");
+const numberField = document.getElementById("number-input");
 const output = document.getElementById("result");
 
 document.querySelector('#dark-toggle').addEventListener('click', toggleDarkTheme);
@@ -14,15 +14,15 @@ document.querySelector('#nav-more').addEventListener('click', function() {
 });
 
 const containsOnlyNumbers = () => {
-    const textValue = textField.value; // Move this line inside the function
+    const numberValue = numberField.value; // Move this line inside the function
     var numberPattern = /^[0-9]+$/;
-    const valid = numberPattern.test(textValue)
+    const valid = numberPattern.test(numberValue)
     if (!valid) {
         alert("The input was either empty or it included letters. Only use digits.");
         return;
     }
 
-    convertToRoman(parseInt(textValue));
+    convertToRoman(parseInt(numberValue));
 }
 
 const convertToRoman = (num) => {

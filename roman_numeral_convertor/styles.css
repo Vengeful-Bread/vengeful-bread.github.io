@@ -495,3 +495,47 @@ footer {
   background: var(--vp-c-brand-3);
   color: var(--vp-c-neutral-inverse);
 }
+
+.input-container {
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 50%;
+}
+
+.convert-btn {
+  background-color: var(--vp-c-green-3);
+  cursor: pointer;
+  border: none;
+  padding: 4px;
+}
+
+.number-input {
+  height: 25px;
+}
+
+#result {
+  margin: 10px 0;
+  min-width: 200px;
+  width: fit-content;
+  min-height: 80px;
+  word-break: break-word;
+  padding: 15px;
+  border: 5px solid var(--vp-c-default-1);
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 1%;
+}
+
+@media screen and (min-width: 500px) {
+  .input-container {
+    flex-direction: row;
+  }
+
+  #result {
+    max-width: 460px;
+  }
+}
